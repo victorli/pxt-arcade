@@ -1,6 +1,6 @@
 {
-    "name": "hw---nrf52",
-    "description": "NRF52 board",
+    "name": "hw---n4",
+    "description": "NRF52840 board",
     "files": [
         "config.ts",
         "basepins.d.ts",
