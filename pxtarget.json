@@ -39,7 +39,8 @@
         "libs/hw",
         "libs/hw---stm32f401",
         "libs/hw---samd51",
-        "libs/hw---nrf52",
+        "libs/hw---n3",
+        "libs/hw---n4",
         "libs/hw---rpi",
         "libs/hw---vm",
         "libs/feather",
@@ -232,6 +233,34 @@
                     "pxt": {
                         "board": {
                             "id": "BOARD_ID_NRF52840"
+                        }
+                    }
+                }
+            }
+        },
+        "nrf52833": {
+            "compile": {
+                "hasHex": true,
+                "openocdScript": "source [find interface/cmsis-dap.cfg]; source [find target/nrf52.cfg]",
+                "webUSB": false,
+                "useUF2": false,
+                "deployDrives": ".*",
+                "deployFileMarker": "DETAILS.TXT"
+            },
+            "compileService": {
+                "codalTarget": {
+                    "name": "codal-nrf52833-dk",
+                    "url": "https://github.com/mmoskal/codal-nrf52833-dk",
+                    "branch": "v1.0.5",
+                    "type": "git"
+                },
+                "codalBinary": "NRF52840_DK",
+                "serviceId": "codal2nrf52840",
+                "dockerImage": "pext/yotta:latest",
+                "yottaConfig": {
+                    "pxt": {
+                        "board": {
+                            "id": "BOARD_ID_NRF52833"
                         }
                     }
                 }
